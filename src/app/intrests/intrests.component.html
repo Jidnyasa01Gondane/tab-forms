@@ -1,0 +1,8 @@
+<form [formGroup]="intrestsForm">
+  <h4>Select your Intrests:</h4>
+  @for(key of formKeys; track key){
+  <p>
+    <mat-checkbox [formControlName]="key">{{ key | titlecase }}</mat-checkbox>
+  </p>
+  }
+</form>

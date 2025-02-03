@@ -1,0 +1,10 @@
+:host {
+  height: 80vh;
+}
+
+::ng-deep .mat-mdc-tab-body-wrapper {
+  height: 450px;
+  border: 1px solid var(--mat-tab-header-active-label-text-color);
+  border-radius: 0 0px 8px 8px;
+  padding: 20px;
+}

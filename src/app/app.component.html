@@ -1,0 +1,19 @@
+<h3>Angular 17 Tab based form</h3>
+<app-tabs [tabs]="tabs" (tabChanged)="showFormData()" />
+@if(selectedIndex === tabs.length-1){
+<div class="form-action">
+  <button
+    mat-stroked-button
+    color="primary"
+    (click)="showFormData()"
+    [disabled]="!formDataService.isFormValueValid()"
+  >
+    Save
+  </button>
+</div>
+}
+<div>
+  @if(formDataValues) { @for(data of (formDataValues| keyvalue); track $index){
+  <div>{{ data.key | titlecase }}: {{ data.value | json }}</div>
+  } }
+</div>
